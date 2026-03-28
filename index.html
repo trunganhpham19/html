@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SleekTasks | Ghi chú & Việc cần làm</title>
+    <meta name="description" content="Ứng dụng quản lý công việc (To-Do List) hiện đại, nhanh chóng và tinh tế.">
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <h1 id="app-title">SleekTasks</h1>
+            <p class="subtitle">Tổ chức cuộc sống của bạn một cách tinh tế.</p>
+        </header>
+
+        <div class="todo-card">
+            <form id="todo-form" class="input-group">
+                <div class="input-wrapper">
+                    <i data-lucide="plus-circle" class="input-icon"></i>
+                    <input type="text" id="todo-input" placeholder="Thêm công việc mới..." aria-label="Thêm công việc" required autocomplete="off">
+                </div>
+                <button type="submit" id="add-btn" class="primary-btn">
+                    <span>Thêm</span>
+                </button>
+            </form>
+
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="active">Đang chờ</button>
+                <button class="filter-btn" data-filter="completed">Đã xong</button>
+                <div class="filter-indicator"></div>
+            </div>
+
+            <div class="task-stats">
+                <span id="items-left">0 công việc đang chờ</span>
+                <button id="clear-completed" class="text-btn">Xóa đã xong</button>
+            </div>
+
+            <ul id="todo-list" class="todo-list">
+                <!-- Công việc sẽ được render ở đây -->
+            </ul>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <p>&copy; 2024 SleekTasks. Thiết kế bởi Antigravity.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
